@@ -1,16 +1,31 @@
-# orders_task
+Orders Task
+Getting Started
+Follow these steps to set up and run the project:
 
-A new Flutter project.
+Prerequisites
 
-## Getting Started
+Install Flutter SDK (Stable Version: 3.24.5).
+Ensure Dart is properly installed along with Flutter.
 
-This project is a starting point for a Flutter application.
+Installation
+**1- Clone the repository:**
+git clone https://github.com/mahm-cyber/orders_task
+cd orders_task
 
-A few resources to get you started if this is your first Flutter project:
+**2- Run the following command to generate missing models (if any):**
+dart run build_runner build -d
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+**3- Start the Flutter application:**
+flutter run
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+# Features
+
+### First Screen
+
+* Displays total orders, average price, and returned orders in a series of containers.
+
+### Second Screen
+
+* Shows a chart of orders per month when you click the "Show Chart" button.
+
