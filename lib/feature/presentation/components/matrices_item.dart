@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
-import 'package:iconify_flutter/icons/mdi.dart';
-import 'package:orders_task/feature/orders_cubit/orders_cubit.dart';
 
 class MatricesItem extends StatelessWidget {
   const MatricesItem({

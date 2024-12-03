@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:json_annotation/json_annotation.dart';
 
-import '../orders_cubit/orders_cubit.dart';
+import '../managers/orders_cubit/orders_cubit.dart';
 
 part 'order_model.g.dart';
 
@@ -25,7 +25,7 @@ class OrderModel {
   @JsonKey(name: "status", fromJson: fromStringStatus)
   final OrderStatus? status;
   @JsonKey(name: "registered")
-  final String? registered;
+  final DateTime? registered;
 
   OrderModel({
     this.id,

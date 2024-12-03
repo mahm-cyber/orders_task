@@ -15,7 +15,9 @@ OrderModel _$OrderModelFromJson(Map<String, dynamic> json) => OrderModel(
       buyer: json['buyer'] as String?,
       tags: (json['tags'] as List<dynamic>?)?.map((e) => e as String).toList(),
       status: OrderModel.fromStringStatus(json['status'] as String),
-      registered: json['registered'] as String?,
+      registered: json['registered'] == null
+          ? null
+          : DateTime.parse(json['registered'] as String),
     );
 
 Map<String, dynamic> _$OrderModelToJson(OrderModel instance) =>
@@ -28,7 +30,7 @@ Map<String, dynamic> _$OrderModelToJson(OrderModel instance) =>
       'buyer': instance.buyer,
       'tags': instance.tags,
       'status': _$OrderStatusEnumMap[instance.status],
-      'registered': instance.registered,
+      'registered': instance.registered?.toIso8601String(),
     };
 
 const _$OrderStatusEnumMap = {

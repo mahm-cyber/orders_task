@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:orders_task/core/extensions/string_ex.dart';
 import 'package:orders_task/feature/models/order_model.dart';
 
-import '../repository/orders_repo.dart';
+import '../../repository/orders_repo.dart';
 
 part 'orders_state.dart';
 

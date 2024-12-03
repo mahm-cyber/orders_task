@@ -3,11 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconify_flutter/icons/bxs.dart';
 import 'package:iconify_flutter/icons/mdi.dart';
 import 'package:orders_task/core/extensions/double_ex.dart';
-import 'package:orders_task/feature/orders_cubit/orders_cubit.dart';
-import 'package:orders_task/feature/presentation/matrices_item.dart';
-import 'package:orders_task/core/extensions/string_ex.dart';
 
+import 'package:orders_task/feature/presentation/components/matrices_item.dart';
+
+import '../managers/orders_cubit/orders_cubit.dart';
 import '../repository/orders_repo.dart';
+import 'chart_view.dart';
 
 class HomeLayout extends StatelessWidget {
   const HomeLayout({super.key});
@@ -17,6 +18,18 @@ class HomeLayout extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Orders Dashboard'),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => const ChartView(),
+            ),
+          );
+        },
+        label: Text(
+          'Show Chart',
+        ),
       ),
       body: SingleChildScrollView(
         child: BlocProvider(
